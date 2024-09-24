@@ -23,12 +23,15 @@ Things you may want to cover:
 
 * ...
 
-初期設定時のみ実行
+initialization
 docker compose run web rails webpacker:install
 docker compose run web rake db:create
 
+if migration data is exist
+docker compose run web bin/rails db:migrate RAILS_ENV=development
 
-新しいapiを作る
+
+scaffold example 
 docker compose run web bin/rails g scaffold User name:string
 docker compose run web bin/rake db:migrate
 
